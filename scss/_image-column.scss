@@ -1,0 +1,32 @@
+.image-columns {
+  display: flex;
+	@include breakpoints-down(medium) {
+		flex-direction: column;
+	}
+	.group {
+		display: flex;
+	}
+	.image-column {
+		width: calc(100vw / 4);
+		height: 400px;
+		background-position: center;
+		background-size: cover;
+		@include breakpoints-down(medium) {
+			height: 200px;
+			width: 100vw;
+		}
+	}
+
+	.img-1 {
+		background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
+	}
+	.img-2 {
+		background-image: url('../images/desktop/image-gallery-orange.jpg');
+	}
+	.img-3 {
+		background-image: url('../images/desktop/image-gallery-cone.jpg');
+	}
+	.img-4 {
+		background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+	}
+}

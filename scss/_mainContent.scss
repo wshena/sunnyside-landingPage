@@ -1,0 +1,137 @@
+.main-content {
+	.section-1 {
+		display: flex;
+		@include breakpoints-down(medium) {
+			flex-direction: column;
+		}
+		.box-image {
+			background-image: url('../images/desktop/image-transform.jpg');
+		}
+		.text-color {
+			border-bottom: 3px solid opacify($Yellow, 0.1);
+		}
+	}
+	.box-text {
+		width: 50vw;
+		height: 500px;
+		background-color: $White;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include breakpoints-down(medium) {
+			width: 100vw;
+			height: 400px;
+			padding: 30px 20px;
+			order: 2;
+		}
+		
+		.text {
+			width: 400px;
+			text-align: left;
+			@include breakpoints-down(medium) {
+				text-align: center;
+				width: 100vw;
+			}
+			.title {
+				text-decoration: none;
+				color: $VeryDarkDesaturatedBlue;
+				font-weight: 900;
+				font-family: 'Fraunces', serif;
+				font-size: 40px;
+				margin-bottom: 30px;
+			}
+			P {
+				color: $GrayishBlue;
+				font-size: 18px;
+				margin-bottom: 30px;
+			}
+			.text-color {
+				cursor: pointer;
+				color: $VeryDarkDesaturatedBlue;
+				font-family: 'Fraunces', serif;
+				font-weight: 900;
+				text-decoration: none;
+				font-size: 15px;
+			}
+		}
+	}
+
+	.box-image {
+		width: 50vw;
+		height: 500px;
+		background-size: cover;
+		background-position: top;
+
+		@include breakpoints-down(medium) {
+			width: 100vw;
+			height: 300px;
+			order: 1;
+		}
+	}
+
+	.section-2 {
+		display: flex;
+		@include breakpoints-down(medium) {
+			flex-direction: column;
+		}
+		.box-image {
+			background-image: url('../images/desktop/image-stand-out.jpg');
+		}
+		.text-color {
+			border-bottom: 3px solid opacify($SoftRed, 0.1);
+		}
+	}
+
+	.section-3 {
+		display: flex;
+		@include breakpoints-down(medium) {
+			flex-direction: column;
+		}
+
+		.box-image {
+			@include breakpoints-down(medium) {
+				height: 600px;
+			}
+		}
+
+		.text {
+			text-align: center;
+			width: 300px;
+			margin: 350px auto 0 auto;
+			@include breakpoints-down(medium) {
+				margin: 350px auto 0 auto;
+			}
+
+			.title {
+				color: $VeryDarkGrayishBlue;
+				font-size: 30px;
+				font-weight: 900;
+				font-family: 'Fraunces', serif;
+			}
+
+			p {
+				margin-top: 10px;
+				font-size: 16px;
+				color: $VeryDarkGrayishBlue;
+				font-family: 'Fraunces', serif;
+				@include breakpoints-down(medium) {
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.box-image-1 {
+			background-image: url('../images/desktop/image-graphic-design.jpg');
+			@include breakpoints-down(medium) {
+				background-image: url('../images/mobile/image-graphic-design.jpg');
+			}
+		}
+		.box-image-2 {
+			background-image: url('../images/desktop/image-photography.jpg');
+			@include breakpoints-down(medium) {
+				background-image: url('../images/mobile/image-photography.jpg');
+			}
+		}
+	}
+}
